@@ -1,35 +1,42 @@
 # Generative AI Mobile Prototype
 
-A prototype repository for experimenting with mobile-focused AI interactions, prompt flows, and lightweight UI workflows.
+> Mobile-native prototype demonstrating on-device and cloud-hybrid generative AI interaction patterns.
 
-## Goals
-- Prototype mobile AI prompt flows
-- Explore UX patterns for AI-assisted mobile tasks
-- Capture learnings for latency and response quality
+## Overview
 
-## Planned Features
-- Scenario-driven prompt tests
-- Lightweight UI mockups
-- Response quality tracking
+This prototype explores human-AI interaction design for mobile contexts — specifically the trade-offs between on-device inference (low latency, privacy-preserving), streaming cloud inference (higher capability), and hybrid approaches. It implements conversational and generative use cases optimized for touch-first interfaces and intermittent connectivity conditions.
 
-## Project Structure
-- `src/` — prototype code (to be added)
-- `prompts/` — scenario prompts (to be added)
-- `docs/` — design notes (to be added)
+## Architecture
+
+- **Inference layer**: Configurable backend supporting local model endpoints and cloud API calls
+- **UI layer**: Mobile-optimized interaction components for conversational and generative tasks
+- **State management**: Session-scoped context handling for multi-turn agent interactions
+
+## Key Technical Highlights
+
+- Streaming response rendering for perceived low latency on cloud inference
+- Graceful degradation to on-device models under poor network conditions
+- Privacy-aware data handling — user inputs processed locally by default
+
+## Stack
+
+React Native / mobile framework, Generative AI APIs, local inference support
 
 ## Getting Started
-```sh
-# Clone the repo
-# Replace with your Git URL
 
-git clone <YOUR_GIT_URL>
+```bash
+git clone https://github.com/ygriggs1/generative-ai-mobile-prototype.git
 cd generative-ai-mobile-prototype
+
+npm install
+cp .env.example .env
+# Add your API keys to .env
 ```
 
-## Roadmap
-- Add prompt scenarios
-- Add prototype UI scaffold
-- Add evaluation notes
+## Author
 
-## License
-MIT
+**Yurick "Yg" Griggs** — AI Systems Researcher & Agentic Infrastructure Architect
+
+- [GitHub](https://github.com/ygriggs1)
+- [LinkedIn](https://linkedin.com/in/yurick-griggs)
+- [Speaker Portfolio](https://sites.google.com/view/yurick-griggs-speaker)
